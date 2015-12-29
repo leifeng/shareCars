@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title>验证code</title>
+</head>
+<body>
+<script src="js/lib/jquery-1.11.3.js"></script>
+<script>
+    (function () {
+        var getQuery = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r !== null) return encodeURI(r[2]);
+            return null;
+        };
+        var findPwdFromEmailVerify = function (code) {
+            $.ajax({
+                url: '/zd/security/findPwdFromEmailVerify',
+                type: 'post',
+                dataType: "json",
+                data: {code: code}
+            }).done(function (data) {
+                if (data.flag === 1) {
+                    location.href = '/zd/user.html?code=' + code + '#/forget/findPwd'
+                } else {
+                    alert(data.msg + '请重新发送验证码');
+                    location.href = '/zd/user.html?#/forget/byEmail'
+                }
+            });
+        };
+        var code = getQuery('code');
+        findPwdFromEmailVerify(code);
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+@import "../base";
+@import "../public";
+@import "../setting";
+@import "header";
+
+.paySucc {
+  background-color: #fff;
+  border: 1px solid $borderForGray;
+  width: 980px;
+  height: 340px;
+  margin: 56px auto;
+  font-size: 14px;
+  .middle {
+    width: 794px;
+    margin: 0 auto;
+  }
+  .stateIcon {
+    margin-top: 46px;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    img {
+      margin: 0 20px 0 10px;
+      vertical-align: middle;
+    }
+  }
+  .timer {
+    color: #666;
+    margin-left: 70px;
+  }
+  .info {
+    color: #555;
+    margin: 20px 0;
+    height: 138px;
+    background-color: #f7f7f7;
+    border: 1px solid $borderForGray;
+    text-indent: 36px;
+    div{
+     margin-top: 30px;
+    }
+  }
+}

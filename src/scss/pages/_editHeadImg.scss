@@ -1,0 +1,72 @@
+@import "../setting";
+
+.editHeadImg {
+  width: 800px;
+  margin: 20px auto;
+  border: 2px solid $borderForGray;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10;
+  @extend %radius;
+  .title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333333;
+    text-indent: 15px;
+    @extend %clear;
+    a {
+      float: right;
+      margin-right: 15px;
+      color: #333333;
+      font-size: 12px;
+    }
+  }
+  .body {
+    padding: 15px 20px;
+    height: 600px;
+    position: relative;
+    .btns {
+      position: absolute;
+      bottom: 15px;
+      text-align: center;
+      width: 100%;
+    }
+    .clear {
+      @extend %clear;
+      margin-bottom: 10px;
+    }
+    #fileHead, .savePhoto {
+      display: inline-block;
+      margin: 0 5px;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      background-color: $green;
+      &:hover {
+        background-color: $hoverGreen2;
+      }
+      @extend %radius;
+    }
+  }
+
+  #photo {
+    width: 500px;
+    max-height: 400px;
+    float: left;
+  }
+
+  #preview {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    float: right;
+    margin-right: 20px;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

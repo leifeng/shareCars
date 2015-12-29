@@ -1,0 +1,400 @@
+@import "../base";
+@import "../public";
+@import "../setting";
+@import "pop";
+@import "pager";
+@import "header";
+@import "footer";
+@import "../fontImg/font-awesome";
+
+body {
+  background-color: #fff;
+}
+
+em {
+  font-style: normal;
+}
+
+.appointment {
+  min-height: 600px;
+  .filter {
+    background-color: #f7f7f7;
+    border: 1px solid $borderForGray;
+    margin-top: 20px;
+    font-size: 14px;
+    .category, .area {
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px dashed $borderForGray;
+      text-indent: 20px;
+    }
+    .point {
+      height: 40px;
+      line-height: 40px;
+      border-bottom: none;
+      overflow: hidden;
+      padding-left: 20px;
+      padding-right: 90px;
+      position: relative;
+      .more {
+        width: 70px;
+        height: 24px;
+        line-height: 24px;
+        border: $borderForGray;
+        display: block;
+        position: absolute;
+        background-color: $green;
+        color: #fff;
+        @extend %radius;
+        left: 993px;
+        top: 9px;
+        text-align: center;
+        font-size: 12px;
+        i{
+          margin-left: 10px;
+        }
+      }
+    }
+    label {
+      color: #666666;
+
+    }
+    a {
+      margin-left: 20px;
+      color: #333333;
+    }
+    .selected {
+      color: $orange;
+    }
+
+  }
+  .resultList {
+    .tip {
+      margin: 20px 0 12px 20px;
+      font-size: 14px;
+      color: #666666;
+      a {
+        color: $orange;
+      }
+    }
+    .orange {
+      color: $orange;
+    }
+    .list {
+      margin-top: 12px;
+      .item {
+        height: 126px;
+        border: 1px solid $borderForGray;
+        margin-bottom: 14px;
+        a {
+          color: #333333;
+        }
+        .yyBtn, .disable {
+          display: block;
+          margin: 50px 20px 0 0;
+          width: 108px;
+          height: 36px;
+          line-height: 36px;
+          color: #fff;
+          text-align: center;
+        }
+        .yyBtn {
+          background-color: $green;
+          @extend %radius;
+          &:hover {
+            background-color: $hoverGreen2;
+          }
+        }
+        .disable {
+          background-color: #dddddd;
+          @extend %radius;
+          &:hover {
+            background-color: #dddddd;
+          }
+        }
+        div {
+          float: left;
+        }
+        .second {
+          width: 300px;
+        }
+        .lastDiv {
+          float: right;
+        }
+        i {
+          display: inline-block;
+          text-align: center;
+        }
+        .icon-line_position {
+          margin-right: 5px;
+        }
+        .icon-home_electricity, .icon-home_pile {
+          margin: 12px 20px 0 20px;
+          line-height: 102px;
+          font-size: 36px;
+          font-style: normal;
+        }
+        dl {
+          margin: 16px 0 0 0;
+          line-height: 35px;
+          dt {
+            font-size: 20px;
+            color: #333333;
+          }
+          dd {
+            font-size: 14px;
+            color: #666666;
+          }
+        }
+        .money {
+          line-height: 80px;
+          font-size: 16px;
+          color: #666666;
+          width: 180px;
+          em {
+            font-style: normal;
+            font-size: 30px;
+            color: $orange;
+            &:last-child {
+              font-size: 16px;
+            }
+          }
+        }
+
+        @extend %clear;
+      }
+    }
+  }
+}
+
+.carInfo {
+  .nav {
+    margin: 20px 0 16px 0;
+    color: #444444;
+    font-size: 14px;
+    a {
+      font-size: 14px;
+      color: #444444;
+    }
+  }
+  .info {
+
+    .carImg {
+      float: left;
+      margin-right: 30px;
+    }
+    .detail {
+      float: left;
+    }
+    ul {
+      em {
+        color: $orange;
+        font-style: normal;
+      }
+      li:last-child {
+        margin-top: 16px;
+      }
+    }
+    .numberPlate {
+      font-size: 30px;
+      @extend %clear;
+      em {
+        float: right;
+        display: inline;
+      }
+      .hour {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+    }
+    .electricity, .mileage {
+      font-size: 16px;
+      color: #333333;
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid $borderForGray;
+    }
+    .map {
+      margin-top: 16px;
+      position: relative;
+      i {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      div {
+        width: 100%;
+        text-indent: 15px;
+        top: 191px;
+        position: absolute;
+        color: #fff;
+        height: 26px;
+        line-height: 26px;
+        background-color: #000;
+        opacity: 0.6;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+      }
+    }
+    .zc, .yyBtn {
+      display: inline-block;
+      width: 210px;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      font-size: 18px;
+      @extend %radius;
+    }
+    .zc {
+      background-color: #f4f4f4;
+      border: 1px solid $borderForGray;
+      margin: 0 20px 0 20px;
+      color: #333333;
+      position: relative;
+      i {
+        background: url(../images/line_pop_icon.png) no-repeat;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+      .showInfoPanel {
+        position: absolute;
+        top: -300px;
+        left: 130px;
+        width: 344px;
+        color: #fff;
+        .info-title {
+          background: url(../images/line_pop_top.png) no-repeat;
+          height: 39px;
+          font-size: 16px;
+        }
+        .info-body {
+          background: url(../images/line_pop_middle.png) repeat-y;
+          padding: 10px 0;
+          font-size: 14px;
+          text-align: left;
+          height: 220px;
+          overflow: auto;
+          div {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 12px;
+          }
+          .priceList {
+            ul {
+              text-indent: 15px;
+            }
+            li {
+              line-height: 25px;
+              margin: 0;
+            }
+          }
+
+        }
+        .info-footer {
+          background: url(../images/line_pop_under.png) no-repeat;
+          height: 20px;
+        }
+      }
+    }
+    .yyBtn {
+      color: #fff;
+      background-color: $green;
+      border: 1px solid $green;
+    }
+    @extend %clear;
+  }
+  .configure, .bbs {
+    .title {
+      font-size: 18px;
+      color: #333333;
+      text-indent: 8px;
+      line-height: 2em;
+      margin-top: 30px;
+    }
+  }
+  .configure {
+    .title {
+      border-bottom: 1px solid $borderForGray;
+    }
+  }
+  .config {
+    margin: 20px 0;
+    i {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 2px;
+    }
+    li {
+      display: inline-block;
+      text-align: center;
+      line-height: 20px;
+      height: 20px;
+      margin-right: 60px;
+      font-size: 12px;
+      color: #666;
+    }
+  }
+  .bbs {
+    .title {
+      border-bottom: 1px dashed $borderForGray;
+      margin-top: 0;
+    }
+    em {
+      color: $orange;
+    }
+    .star {
+      display: inline-block;
+      margin-left: 20px;
+      span {
+        display: inline-block;
+        width: 15px;
+        height: 14px;
+      }
+      .star1 {
+        background: url(../images/line_star.png) no-repeat;
+      }
+      .star2 {
+        background: url(../images/line_star1.png) no-repeat;
+      }
+    }
+    ul {
+      li {
+        height: 112px;
+        border-bottom: 1px solid $borderForGray;
+        font-size: 13px;
+        color: #666666;
+        @extend %clear;
+        .headImg, .ping {
+          float: left;
+        }
+        .headImg {
+          margin-top: 26px;
+          margin-right: 26px;
+        }
+        .ping {
+          margin-top: 30px;
+          strong {
+            font-size: 16px;
+            color: #333333;
+            display: block;
+            margin-bottom: 14px;
+          }
+        }
+        .time {
+          float: right;
+          span {
+            display: block;
+            margin-top: 80px;
+          }
+        }
+        .time {
+          font-size: 14px;
+          color: #888888;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

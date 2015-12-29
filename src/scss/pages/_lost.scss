@@ -1,0 +1,55 @@
+@import "../setting";
+
+.lost {
+  width: 400px;
+  height: 250px;
+  margin: 100px auto;
+  border: 2px solid $borderForGray;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10;
+  @extend %radius;
+  .title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333333;
+    text-indent: 15px;
+    @extend %clear;
+    a {
+      float: right;
+      margin-right: 15px;
+      color: #333333;
+      font-size: 12px;
+    }
+  }
+  .body {
+
+    label {
+      display: block;
+      width: 70%;
+      margin: 10px auto;
+      text-align: left;
+      font-size: 14px;
+    }
+    input {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      height: 30px;
+      line-height: 30px;
+      text-indent: 15px;
+      border: 1px solid $borderForGray;
+    }
+    a {
+      display: block;
+      width: 124px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      background-color: $green;
+      color: #fff;
+      margin: 20px auto;
+    }
+  }
+}

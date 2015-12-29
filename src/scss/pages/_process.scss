@@ -1,0 +1,77 @@
+@import "../setting";
+.process {
+  margin: 32px auto;
+  width: 778px;
+  height: 60px;
+  text-align: center;
+  .txt {
+    font-size: 14px;
+    position: relative;
+    .action {
+      color: $green;
+    }
+    a {
+      position: absolute;
+      color: #999;
+      &:first-child {
+        left: 18px;
+      }
+      &:nth-child(2) {
+        left: 197px;
+      }
+      &:nth-child(3) {
+        left: 453px;
+      }
+      &:nth-child(4) {
+        left: 680px;
+      }
+    }
+
+  }
+  .img {
+    margin-bottom: 5px;
+    a:last-child {
+      span {
+        display: none;
+      }
+      i {
+        width: 15px;
+        height: 12px;
+        display: inline-block;
+        background: url(../images/open_icon_ok.png) no-repeat;
+      }
+
+    }
+    .line {
+      display: inline-block;
+      height: 3px;
+      width: 188px;
+      margin: 0 5px;
+      vertical-align: middle;
+    }
+    .greenLine {
+      background: url(../images/open_line_down.png) no-repeat;
+    }
+    .grayLine {
+      background: url(../images/open_line_nor.png) no-repeat;
+    }
+    .finish, .action, .unfinished {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      width: 30px;
+      text-align: center;
+      color: #fff;
+    }
+    .finish {
+      background: url(../images/open_icon_nor.png) no-repeat;
+    }
+    .action {
+      background: url(../images/open_icon_down.png) no-repeat;
+    }
+    .unfinished {
+      background: url(../images/open_icon_disable.png) no-repeat;
+    }
+  }
+
+}

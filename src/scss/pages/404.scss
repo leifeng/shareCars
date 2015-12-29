@@ -1,0 +1,28 @@
+@import "../base";
+@import "../public";
+@import "../setting";
+@import "header";
+@import "footer";
+
+.img404 {
+  min-height: 600px;
+}
+.img404-1{
+  position: relative;
+  text-align: center;
+  width: 553px;
+  height: 401px;
+  margin: 0 auto;
+}
+
+.img404 a {
+  position: absolute;
+  font-size: 28px;
+  color: #fff;
+  top: 301px;
+  left: 430px;
+}
+
+.img404 a:hover {
+  color: #c3efd0;
+}

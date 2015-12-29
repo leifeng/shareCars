@@ -1,0 +1,59 @@
+@import 'setting';
+
+body {
+  background-color: #f7f7f7;
+  font-family: '\5FAE\8F6F\96C5\9ED1', Arial;
+  user-select: none;
+}
+
+ul, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border-radius: 3px;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a {
+  outline: none;
+}
+
+a:focus {
+  outline: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: red;
+}
+.orange{
+  color: $orange;
+}
+.gray{
+  color:#999 ;
+}
+.content {
+  @extend %content;
+}
+
+
+
+
+

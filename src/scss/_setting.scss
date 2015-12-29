@@ -1,0 +1,42 @@
+$borderForGray:#e5e5e5;
+$green:#1eac36;
+$orange:#ff7800;
+$blue:#1083dc;
+$hoverGreen2:#0d9924;
+$hoverGray:#dddddd;
+$hoverGreen1:#1eac36;
+%content{
+  width: 1104px;
+  margin: 0 auto;
+}
+
+%clear{
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+%radius{
+  border-radius: 3px;
+}
+%btnToGreen{
+  &:hover{
+    background-color:#1eac36 ;
+    color:#fff;
+  }
+}
+%btnToGreenDeep{
+  &:hover{
+    background-color:#0d9924 ;
+    border: 1px solid #0d9924;
+  }
+
+}
+%btnToGray{
+  &:hover{
+    background-color:#dddddd ;
+    border: 1px solid #dddddd;
+  }
+
+}

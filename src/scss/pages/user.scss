@@ -1,0 +1,198 @@
+@import "../base";
+@import "../public";
+@import "../setting";
+@import "footer";
+
+.h5Green{
+  height: 5px;
+  background-color: $green;
+}
+.user{
+  label {
+    display: inline-block;
+    color: #333333;
+    margin-bottom: 10px;
+    width: 342px;
+    i{
+      float: right;
+      font-size: 12px;
+      color: $green;
+    }
+    @extend %clear;
+  }
+
+  input[type="text"], input[type="password"] {
+    width: 342px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid $borderForGray;
+    color: #999999;
+    text-indent: 10px;
+    margin-bottom: 20px;
+    display: block;
+    padding: 0;
+    @extend %radius;
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+    border: 1px solid $borderForGray;
+    padding: 0;
+  }
+
+}
+
+.login {
+  width: 436px;
+  margin: 66px auto;
+  font-size: 14px;
+  .logo{
+    text-align: center;
+  }
+  h1 {
+    font-size: 32px;
+    color: #555555;
+    margin: 30px 0;
+    text-align: center;
+  }
+  .panel {
+    box-sizing:border-box;
+    border: 1px solid $borderForGray;
+    height: 388px;
+    background-color: #fff;
+    padding: 48px 50px 0 50px;
+    .login-btn, .reg-btn{
+      width: 336px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      display: block;
+    }
+    .login-btn {
+      background-color: $green;
+      color: #fff;
+      margin: 8px 0 0 0;
+      border: 1px solid $green;
+      @extend %btnToGreenDeep;
+    }
+    .reg-btn {
+      border: 1px solid $borderForGray;
+      color: $green;
+    }
+    div {
+      height: 52px;
+      line-height: 52px;
+      a {
+        float: right;
+        color: #1083dc;
+      }
+      @extend %clear;
+    }
+  }
+}
+
+.reg ,.forget{
+  width: 980px;
+  margin: 20px auto;
+  font-size: 14px;
+  h2{
+    color: $green;
+    text-align: center;
+    width: 370px;
+    font-size: 20px;
+  }
+  .banner{
+    margin-bottom: 10px;
+    width: 980px;
+    overflow: hidden;
+  }
+  .tab {
+    width: 920px;
+    height: 56px;
+    line-height: 56px;
+    margin: 30px auto 40px auto;
+    border-bottom: 2px solid $borderForGray;
+    position: relative;
+    & > a {
+      font-size: 20px;
+      color: #555555;
+      display: inline-block;
+      width: 160px;
+      text-align: center;
+      position: absolute;
+    }
+    .mobileTab {
+      left: 0;
+    }
+    .usernameTab,.emailTab {
+      left: 160px;
+    }
+    .active {
+      color: $green;
+      border-bottom: 2px solid $green;
+    }
+    div {
+      float: right;
+      a {
+        color: $blue;
+      }
+
+    }
+    @extend %clear;
+  }
+  .form {
+    width: 520px;
+    margin: 0 auto;
+  }
+
+  input[type="text"], input[type="password"],label{
+    width: 370px;
+  }
+  .panel {
+    border: 1px solid $borderForGray;
+    background-color: #fff;
+    height: 630px;
+  }
+  .regBtn {
+    @extend %radius;
+    @extend %btnToGreenDeep;
+    width: 370px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    background-color:$green;
+    margin: 10px 0 20px 0;
+    border: 1px solid $green;
+  }
+  em{
+    font-style: normal;
+    display: block;
+    a{
+      color: $blue;
+    }
+  }
+  .code {
+    input {
+      float: left;
+    }
+    a {
+      @extend %radius;
+      @extend %btnToGreenDeep;
+      background-color: $green;
+      color: #fff;
+      display: inline-block;
+      width: 128px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      float: right;
+      border: 1px solid $green;
+    }
+    @extend %clear;
+  }
+}
